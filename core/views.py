@@ -96,7 +96,7 @@ def updateNote(request, pk):
 
 
 
-@api_view(['DELETE'])
+@api_view(['DELETE', 'GET'])
 def deleteNote(request, pk):
     note = Note.objects.get(id=pk)
     note.delete()
