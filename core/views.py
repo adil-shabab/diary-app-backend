@@ -1,4 +1,3 @@
-from functools import partial
 from django.shortcuts import render
 # from django.http import JsonResponse
 from rest_framework.response import Response
@@ -87,7 +86,7 @@ def updateNote(request, pk):
     return Response(serializer.data)
 
 
-# @api_view(['DELETE'])
+# @api_view(['DELETE', 'GET'])
 # def deleteNote(request, pk):
 #     note = Note.objects.get(id=pk)
 #     note.delete()
@@ -102,3 +101,10 @@ def deleteNote(request, pk):
     note = Note.objects.get(id=pk)
     note.delete()
     return Response("Note was deleted")
+
+
+# @api_view(['DELETE'])
+# def deleteNote(request, pk):
+#     note = Note.objects.get(id=pk)
+#     note.delete()
+#     return Response("note was deleted")

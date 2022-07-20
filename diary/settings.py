@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'api.apps.ApiConfig',
+    'core.apps.CoreConfig',
     'corsheaders',
     'rest_framework'
 ]
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'notes.urls'
+ROOT_URLCONF = 'diary.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'notes.wsgi.application'
+WSGI_APPLICATION = 'diary.wsgi.application'
 
 
 # Database
